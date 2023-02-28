@@ -5,13 +5,18 @@ This plugin generates a color palette and dominant color for images uploaded to 
 ```javascript
 ...
 colors: {
-  dominant: "#30302f",
-  palette: [ "#111110", "#535a55", "#898777", "#c0bdbf" ]
+  dominant: "#534f70",
+  palette: [ "#042d65", "#43374b", "#f96597", "#77c6ff", "#e1e203" ]
 }
 ...
 ```
 
 This can be useful for adding color accents, or for using the colors as a placeholder while the image is loading.
+
+<p style="text-align:center; margin: 30px 0 30px;">
+    <img src="https://user-images.githubusercontent.com/22644154/221955944-747c3ecc-44ac-49d4-bb6c-489803135ad5.jpg" width="500" /><br/>
+    <span style="font-size:10px;font-style:italic">Photo by <a href="https://unsplash.com/es/@thomasmcphersonphotography?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Thomas McPherson</a> on <a href="https://unsplash.com/photos/tVEqStC2uz8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></span>
+</p>
 
 ## Requirements
 
@@ -41,7 +46,7 @@ On Heroku, you'll need to add the [GraphicsMagick buildpack](https://github.com/
     "image-color-palette": {
         enabled: true,
         config: {
-            format: 'rgb',
+            format: "rgb",
             paletteSize: 4,
         }
     }
