@@ -1,7 +1,5 @@
 # 🎨 Strapi Plugin: Image Color Palette
 
-## Description
-
 This plugin generates a color palette and dominant color for images uploaded to Strapi. It uses GraphicsMagick to extract the colors from the image after it's uploaded, and stores them in the database schema. When queried, it looks like this:
 
 ```javascript
