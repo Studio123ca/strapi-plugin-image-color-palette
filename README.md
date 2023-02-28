@@ -11,7 +11,7 @@ colors: {
 ```
 
 ## Requirements
-You'll need to have GraphicsMagick installed on your system. You can install it with Homebrew on Mac OS X with the following command:
+You'll need to have GraphicsMagick installed on your system. You can install it with Homebrew on macOS with the following command:
 
 ```bash
 brew install graphicsmagick
