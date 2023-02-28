@@ -79,8 +79,8 @@ To add color palette data to existing images, you'll need to add the following s
 ```javascript
 'use strict';
 
-const FILES_TABLE = 'files';
-const BATCH_SIZE = 1000;
+const FILES_TABLE = 'files'; // Change this if you're using a custom table name
+const BATCH_SIZE = 1000;     // Batch size for querying the database
 
 async function up(trx) {
     let lastId = 0;
@@ -105,7 +105,7 @@ async function up(trx) {
             if (colorPalette)
                 await trx.update('colors', colorPalette).from(FILES_TABLE).where('id', file.id);
 
-            console.log(`Added color palette to file ${file.id} successfully.`);
+            strapi.log.info(`Added color data to file ${file.id} successfully.`);
         }
 
         if (files.length < BATCH_SIZE) {
