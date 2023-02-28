@@ -12,8 +12,8 @@ module.exports = ({ strapi }) => {
     // Check if GraphicsMagick is installed (use ./server/assets/test.png)
     gm(path.join(__dirname, 'assets', 'test.png')).identify((err, data) => {
         if (err) {
-            strapi.log.warn(
-                'GraphicsMagick is not installed, skipping image color palette plugin.',
+            return strapi.log.warn(
+                'GraphicsMagick is not installed or is misconfigured, skipping image color palette plugin.',
             );
         }
     });
