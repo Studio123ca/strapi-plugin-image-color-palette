@@ -8,11 +8,14 @@ const rgbToHex = rgb => {
     const { r, g, b } = rgb;
 
     const hex = x => {
-        const hex = x.toString(16);
-        return hex.length === 1 ? '0' + hex : hex;
+        const hex = (
+            (x) >>> 0
+        ).toString(16).substring(0, 2);
+
+        return hex.length === 1 ? `0${hex}` : hex;
     };
 
-    return '#' + hex(r) + hex(g) + hex(b);
+    return `#${hex(r) + hex(g) + hex(b)}`;
 };
 
 module.exports = ({ strapi }) => ({
