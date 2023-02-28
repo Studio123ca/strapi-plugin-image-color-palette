@@ -6,6 +6,8 @@ const { ColorTranslator } = require('colortranslator');
 const { getService } = require('../utils');
 
 const convert = (rgbObj, format) => {
+    if (!rgbObj) return null;
+
     const color = new ColorTranslator(rgbObj);
 
     switch (format) {
