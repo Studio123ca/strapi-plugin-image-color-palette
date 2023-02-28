@@ -1,10 +1,10 @@
 {
-    "name": "strapi-plugin-image-color-palettes",
+    "name": "strapi-plugin-image-color-palette",
     "version": "1.0.0",
     "description": "A Strapi plugin that extends image uploads to generate and attach a color palette to the schema when uploaded.",
     "strapi": {
-        "displayName": "Image Color Palettes",
-        "name": "image-color-palettes",
+        "displayName": "Image Color Palette",
+        "name": "image-color-palette",
         "description": "A Strapi plugin that extends image uploads to generate and attach a color palette to the schema when uploaded.",
         "kind": "plugin"
     },

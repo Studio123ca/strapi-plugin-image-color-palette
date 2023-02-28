@@ -1,9 +1,9 @@
 'use strict';
 
-const imageColorPalettes = require('./image-color-palettes');
+const imageColorPalette = require('./image-color-palette');
 const settings = require('./settings');
 
 module.exports = {
-    'image-color-palettes': imageColorPalettes,
+    'image-color-palette': imageColorPalette,
     settings,
 };

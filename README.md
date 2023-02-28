@@ -1,4 +1,4 @@
-# Image Color Palettes
+# Image Color Palette
 
 Readme is a work in progress.
 
@@ -19,7 +19,7 @@ heroku buildpacks:add --index 1 https://github.com/mcollina/heroku-buildpack-gra
 Add the following to your Strapi plugin config:
 
 ```javascript
-"image-color-palettes": {
+"image-color-palette": {
     enabled: true,
     config: {
         format: 'rgb', // Color format ('hex' or 'rgb')
