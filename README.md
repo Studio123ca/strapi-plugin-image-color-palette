@@ -64,11 +64,13 @@ The plugin offers the following configuration options:
 ## Migration
 To add color palette data to existing images, you'll need to add the following script to the `./database/migrations` folder in your Strapi project. You can name it anything you want, but it's recommended to use a timestamp as the prefix. It will run automatically when you start your Strapi server, so be sure to backup your database before running it.
 
+**Important:** Make sure you start Strapi after installation so that the database schema is updated with the new `colors` column. Then, you can add the migration script and start Strapi again.
+
 ```javascript
 'use strict';
 
-const FILES_TABLE = 'files'; // Table name for your files
-const BATCH_SIZE = 1000; // Number of files to process at a time
+const FILES_TABLE = 'files';
+const BATCH_SIZE = 1000;
 
 async function up(trx) {
     let lastId = 0;
@@ -92,6 +94,8 @@ async function up(trx) {
 
             if (colorPalette)
                 await trx.update('colors', colorPalette).from(FILES_TABLE).where('id', file.id);
+
+            console.log(`Added color palette to file ${file.id} successfully.`);
         }
 
         if (files.length < BATCH_SIZE) {
