@@ -1,25 +1,36 @@
 {
-    "name": "strapi-plugin-image-color-palette",
-    "version": "1.0.0",
+  "name": "@studio123/strapi-plugin-image-color-palette",
+  "version": "1.0.0",
+  "description": "A Strapi plugin that extends image uploads to generate and attach a color palette to the schema when uploaded.",
+  "strapi": {
+    "displayName": "Image Color Palette",
+    "name": "image-color-palette",
     "description": "A Strapi plugin that extends image uploads to generate and attach a color palette to the schema when uploaded.",
-    "strapi": {
-        "displayName": "Image Color Palette",
-        "name": "image-color-palette",
-        "description": "A Strapi plugin that extends image uploads to generate and attach a color palette to the schema when uploaded.",
-        "kind": "plugin"
-    },
-    "scripts": {
-        "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
-    },
-    "dependencies": {
-        "colortranslator": "^1.10.2",
-        "gm-palette": "^1.0.3"
-    },
-    "peerDependencies": {
-        "@strapi/strapi": "^4.1.5",
-        "mime-types": "2.1.35"
-    },
-    "devDependencies": {
-        "prettier": "^2.8.4"
-    }
+    "kind": "plugin"
+  },
+  "main": "strapi-server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Studio123ca/strapi-plugin-image-color-palette.git"
+  },
+  "author": "Cody Marcoux <cody@studio123.ca>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Studio123ca/strapi-plugin-image-color-palette/issues"
+  },
+  "homepage": "https://github.com/Studio123ca/strapi-plugin-image-color-palette#readme",
+  "scripts": {
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
+  },
+  "dependencies": {
+    "colortranslator": "^1.10.2",
+    "gm-palette": "^1.0.3"
+  },
+  "peerDependencies": {
+    "@strapi/strapi": "^4.1.5",
+    "mime-types": "2.1.35"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.4"
+  }
 }
