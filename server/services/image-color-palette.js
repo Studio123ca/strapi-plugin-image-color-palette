@@ -1,21 +1,25 @@
 'use strict';
 
-const gmPalette = require('gm-palette');
 const axios = require('axios');
+const gmPalette = require('gm-palette');
+const { ColorTranslator } = require('colortranslator');
 const { getService } = require('../utils');
 
-const rgbToHex = rgb => {
-    const { r, g, b } = rgb;
+const convert = (rgbObj, format) => {
+    const color = new ColorTranslator(rgbObj);
 
-    const hex = x => {
-        const hex = (
-            (x) >>> 0
-        ).toString(16).substring(0, 2);
-
-        return hex.length === 1 ? `0${hex}` : hex;
-    };
-
-    return `#${hex(r) + hex(g) + hex(b)}`;
+    switch (format) {
+        case 'hex':
+            return `#${color.HEX}`;
+        case 'rgb':
+            return color.RGB;
+        case 'hsl':
+            return color.HSL;
+        case 'raw':
+            return rgbObj;
+        default:
+            return rgbObj;
+    }
 };
 
 module.exports = ({ strapi }) => ({
@@ -29,20 +33,12 @@ module.exports = ({ strapi }) => ({
             if (!res.data) return null;
 
             const dominantColor = await gmPalette.dominantColor(res.data);
-            const palette = await gmPalette.palette(res.data, settings.paletteSize || 5);
+            const palette = await gmPalette.palette(res.data, settings.paletteSize || 4);
 
             let colors = {
-                dominant: dominantColor,
-                palette: palette,
+                dominant: convert(dominantColor, settings.format),
+                palette: palette.map(color => convert(color, settings.format)),
             };
-
-            if (settings.format === 'hex') {
-                colors.dominant = rgbToHex(dominantColor);
-
-                colors.palette = palette.map(color => {
-                    return rgbToHex(color);
-                });
-            }
 
             return colors;
         } catch (e) {

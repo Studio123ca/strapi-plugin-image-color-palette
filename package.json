@@ -12,6 +12,7 @@
         "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
     },
     "dependencies": {
+        "colortranslator": "^1.10.2",
         "gm-palette": "^1.0.3"
     },
     "peerDependencies": {
