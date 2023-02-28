@@ -25,11 +25,7 @@ brew install graphicsmagick
 
 ### Heroku
 
-On Heroku, you'll need to add the [GraphicsMagick buildpack](https://github.com/mcollina/heroku-buildpack-graphicsmagick) to your app:
-
-```bash
-heroku buildpacks:add --index 1 https://github.com/mcollina/heroku-buildpack-graphicsmagick.git
-```
+On Heroku, you'll need to add the [GraphicsMagick buildpack](https://github.com/bogini/heroku-buildpack-graphicsmagick) to your app.
 
 ## Installation
 
