@@ -1,0 +1,48 @@
+# caches #
+.next
+.netlify
+.cache
+
+# auto-generated public files #
+/public/sitemap*.xml
+/public/robots.txt
+
+# node_modules #
+node_modules/
+/node_modules/
+.next
+
+# Packages #
+*.7z
+*.dmg
+*.gz
+*.bz2
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.tgz
+*.map
+*.env.*
+
+# Logs and databases #
+*.log
+*.sql
+*.env
+!.env.example
+
+# OS generated files #
+**.DS_Store*
+.DS_Store
+/.DS_Store
+DS_Store
+ehthumbs.db
+Icon?
+Thumbs.db
+._*
+
+# SASS/SCSS #
+**/.sass-cache
+**/.sass-cache/*
+**/.map
