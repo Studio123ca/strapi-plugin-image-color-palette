@@ -27,7 +27,7 @@ heroku buildpacks:add --index 1 https://github.com/mcollina/heroku-buildpack-gra
 1. Install the plugin via Yarn:
 
     ```bash
-    yarn add @Studio123ca/strapi-plugin-image-color-palette
+    yarn add strapi-plugin-image-color-palette
     ```
 
 2. Append the following to your Strapi plugin config file (`config/plugins.js`):
