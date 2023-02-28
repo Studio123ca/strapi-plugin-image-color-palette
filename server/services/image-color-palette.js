@@ -10,7 +10,7 @@ const convert = (rgbObj, format) => {
 
     switch (format) {
         case 'hex':
-            return `#${color.HEX}`;
+            return color.HEX;
         case 'rgb':
             return color.RGB;
         case 'hsl':
