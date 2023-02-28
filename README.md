@@ -57,6 +57,15 @@ The plugin offers the following configuration options:
 | `format`      | The format to return the colors in.<br/>Available options are `hex`, `rgb`, `hsl`, and `raw`.<br/>Default: `raw` |
 | `paletteSize` | The number of colors to generate in the color palette.<br/>Accepts an integer between 1-8.<br/>Default: `4`     |
 
+### Format Examples
+The plugin can return the colors in the following formats:
+```javascript
+    raw: { r: 255, g: 255, b: 255 },
+    hex: '#ffffff',
+    rgb: 'rgb(255, 255, 255)',
+    hsl: 'hsl(0, 0%, 100%)',
+```
+
 ## Migration
 To add color palette data to existing images, you'll need to add the following script to the `./database/migrations` folder in your Strapi project. You can name it anything you want, but it's recommended to use a timestamp as the prefix. It will run automatically when you start your Strapi server, so be sure to backup your database before running it.
 
