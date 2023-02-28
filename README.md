@@ -13,8 +13,8 @@ colors: {
 
 This can be useful for adding color accents, or for using the colors as a placeholder while the image is loading.
 
-<p style="text-align:center; margin: 30px 0 30px;">
-    <img src="https://user-images.githubusercontent.com/22644154/221955944-747c3ecc-44ac-49d4-bb6c-489803135ad5.jpg" width="500" /><br/>
+<p align="center" style="text-align:center; margin: 30px 0 30px;">
+    <img src="https://user-images.githubusercontent.com/22644154/221955944-747c3ecc-44ac-49d4-bb6c-489803135ad5.jpg" width="650" /><br/>
     <span style="font-size:10px;font-style:italic">Photo by <a href="https://unsplash.com/es/@thomasmcphersonphotography?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Thomas McPherson</a> on <a href="https://unsplash.com/photos/tVEqStC2uz8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></span>
 </p>
 
