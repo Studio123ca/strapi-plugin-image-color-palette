@@ -2,7 +2,7 @@
 
 ## Description
 
-This plugin generates a colour palette and dominant colour for images uploaded to Strapi. It uses GraphicsMagick to extract the colours from the image after it's uploaded, and stores them in the database schema. When queried, it looks like this:
+This plugin generates a color palette and dominant color for images uploaded to Strapi. It uses GraphicsMagick to extract the colors from the image after it's uploaded, and stores them in the database schema. When queried, it looks like this:
 
 ```javascript
 ...
@@ -13,7 +13,7 @@ colors: {
 ...
 ```
 
-This can be useful for adding colour accents, or for using the colours as a placeholder while the image is loading.
+This can be useful for adding color accents, or for using the colors as a placeholder while the image is loading.
 
 ## Requirements
 
@@ -60,8 +60,8 @@ The plugin offers the following configuration options:
 
 | Option        | Description                                                                                                       |
 |---------------|-------------------------------------------------------------------------------------------------------------------|
-| `format`      | The format to return the colours in.<br/>Available options are `hex`, `rgb`, `hsl`, and `raw`.<br/>Default: `raw` |
-| `paletteSize` | The number of colours to generate in the colour palette.<br/>Accepts an integer between 1-8.<br/>Default: `4`     |
+| `format`      | The format to return the colors in.<br/>Available options are `hex`, `rgb`, `hsl`, and `raw`.<br/>Default: `raw` |
+| `paletteSize` | The number of colors to generate in the color palette.<br/>Accepts an integer between 1-8.<br/>Default: `4`     |
 
 ## Contributing
 To contribute to this plugin, please open an issue or submit a pull request.
