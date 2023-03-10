@@ -55,6 +55,16 @@ module.exports = ({ strapi }) => ({
                         return rgbObj;
                     });
 
+                    // remove duplicates from palette
+                    palette = palette.filter((color, index, self) => {
+                        return (
+                            index ===
+                            self.findIndex(
+                                c => c.r === color.r && c.g === color.g && c.b === color.b,
+                            )
+                        );
+                    });
+
                     dominantColor = palette[0];
                 }
             } else {
