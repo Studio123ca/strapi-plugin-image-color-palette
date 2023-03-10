@@ -93,7 +93,7 @@ async function up(trx) {
 
     while (true) {
         const files = await trx
-            .select(['id', 'url'])
+            .select(['id', 'url', 'mime'])
             .from(FILES_TABLE)
             .whereNot('url', null)
             .andWhereLike('mime', 'image/%')
@@ -106,7 +106,7 @@ async function up(trx) {
             const colorPalette = await strapi
                 .plugin('image-color-palette')
                 .service('image-color-palette')
-                .generate(file.url);
+                .generate(file.url, file.mime);
 
             if (colorPalette) {
                 await trx
