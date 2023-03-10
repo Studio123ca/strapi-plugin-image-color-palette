@@ -18,6 +18,11 @@ This can be useful for adding color accents, or for using the colors as a placeh
     <span style="font-size:10px;font-style:italic">Photo by <a href="https://unsplash.com/es/@thomasmcphersonphotography?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Thomas McPherson</a> on <a href="https://unsplash.com/photos/tVEqStC2uz8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></span>
 </p>
 
+## Supported Formats
+This plugin supports most major image formats. 
+
+It also now supports SVG files but due to some limitations, it will attach the full palette regardless of what is set as the `paletteSize`. The dominant color will be set to the first color in this array, so it won't always be accurate.
+
 ## Requirements
 
 This plugin is for Strapi v4.
@@ -61,6 +66,7 @@ The plugin offers the following configuration options:
 |---------------|-------------------------------------------------------------------------------------------------------------------|
 | `format`      | The format to return the colors in.<br/>Available options are `hex`, `rgb`, `hsl`, and `raw`.<br/>Default: `raw` |
 | `paletteSize` | The number of colors to generate in the color palette.<br/>Accepts an integer between 1-8.<br/>Default: `4`     |
+
 
 ### Format Examples
 The plugin can return the colors in the following formats:

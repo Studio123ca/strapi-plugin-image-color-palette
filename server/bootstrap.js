@@ -8,7 +8,7 @@ module.exports = ({ strapi }) => {
 
         if (!canGenerateColor(data)) return;
 
-        data.colors = await getService(strapi, 'image-color-palette').generate(data.url);
+        data.colors = await getService(strapi, 'image-color-palette').generate(data.url, data.mime);
     };
 
     strapi.db.lifecycles.subscribe({
