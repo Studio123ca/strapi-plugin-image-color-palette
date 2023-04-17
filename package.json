@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "colortranslator": "^1.10.2",
+    "env-var": "^7.3.0",
     "get-svg-colors": "^2.0.0",
     "gm-palette": "^1.0.3"
   },

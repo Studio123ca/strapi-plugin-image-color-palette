@@ -1,5 +1,6 @@
 'use strict';
 
+const env = require('env-var');
 const axios = require('axios');
 const gmPalette = require('gm-palette');
 const getSvgColors = require('get-svg-colors');
@@ -30,12 +31,25 @@ module.exports = ({ strapi }) => ({
         try {
             const settings = getService(strapi, 'settings').get();
 
+            let imageUrl = url;
             let dominantColor = null;
             let palette = [];
 
+            // if url is relative, add host
+            if (!url.startsWith('http')) {
+                let host = env.get('HOST').asString();
+                let port = env.get('PORT').asInt();
+
+                imageUrl = `http://${host}:${port}${url}`;
+            }
+
             if (mime === 'image/svg+xml') {
                 // get svg as a string
-                const res = await axios.get(url);
+                const res = await axios.get(imageUrl, {
+                    headers: {
+                        'Access-Control-Allow-Origin': '*',
+                    },
+                });
                 const svg = res.data;
                 const svgColors = await getSvgColors(svg);
 
@@ -68,8 +82,11 @@ module.exports = ({ strapi }) => ({
                     dominantColor = palette[0];
                 }
             } else {
-                const res = await axios.get(url, {
+                const res = await axios.get(imageUrl, {
                     responseType: 'arraybuffer',
+                    headers: {
+                        'Access-Control-Allow-Origin': '*',
+                    },
                 });
 
                 if (!res.data) return null;
